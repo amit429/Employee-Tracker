@@ -1,7 +1,7 @@
 import React from 'react'
 import Chart from 'react-apexcharts'
 
-export default function PieChart() {
+export default function PieChart(props) {
   return (
     <>
         <Chart
@@ -13,9 +13,33 @@ export default function PieChart() {
                     toolbar: {
                         show: true,
                         autoSelected: 'pan',
+                        tools: {
+                            download: true,
+                            selection: true,
+                            zoom: true,
+                            zoomin: true,
+                            zoomout: true,
+                            pan: true,
+                        }
                     },
                     zoom: {
                         enabled: true,
+                    },
+
+                    tooltip: {
+                        enabled: true,
+                        followCursor: true,
+                        theme: 'dark',
+                        x: {
+                            show: true,
+                            format: 'dd MMM yyyy',
+                        },
+
+                        y: {
+                            formatter: function (value) {
+                                return value + " mins";
+                            }
+                        }
                     },
 
                     dropShadow: {
@@ -73,10 +97,10 @@ export default function PieChart() {
                     }
                   },
 
-                labels: ['Team A', 'Team B', 'Team C', 'Team D', 'Team E'],
+                labels: ['Breaks', 'Meetings', 'Work'],
             }}
             type="pie"
-            series={[30,40,50,60,70]}
+            series={[44, 55, 41]}
             
         />
     </>
