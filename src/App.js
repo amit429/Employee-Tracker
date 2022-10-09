@@ -1,11 +1,18 @@
 import logo from './logo.svg';
 import './App.css';
-import Dashboard from './admin/client/Dashboard';
+import AdminDashboard from './admin/client/Dashboard';
+import EmployeeDashboard from './employee/client/EmployeeDashboard';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 function App() {
   return (
     <>
-      <Dashboard/>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/admin-dashboard" element={<AdminDashboard/>}/>
+          <Route path="/employee-dashboard" element={<EmployeeDashboard/>}/>
+        </Routes>
+      </BrowserRouter>
     </>
   );
 }

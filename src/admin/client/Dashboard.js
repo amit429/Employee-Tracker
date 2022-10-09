@@ -5,7 +5,7 @@ import Table from './components/Table'
 export default function Dashboard() {
   return (
     <>
-        <Navbar/>
+        <Navbar title = "Employee Tracker Dashboard"/>
         <Table/>
     </>
   )

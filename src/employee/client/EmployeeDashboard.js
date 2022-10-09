@@ -1,0 +1,28 @@
+import { Box, Typography} from '@mui/material'
+import React from 'react'
+import Navbar from '../../admin/client/components/Navbar'
+import PieChart from './components/PieChart'
+
+export default function EmployeeDashboard() {
+  return (
+    <>
+        <Navbar title = "Employee Dashboard"/>
+        <Typography variant='h4' fontFamily={"serif"} fontWeight= "800" align='center' marginTop="50px">
+                User Data Analysis
+        </Typography>
+        <Box
+            sx={{
+                display: 'flex',
+                flexDirection: 'row',
+                justifyContent: 'space-around',
+                height: '1000px',
+                marginTop: '100px',
+            }}
+        >
+           
+            <PieChart/>
+            <PieChart/>
+        </Box>
+    </>
+  )
+}

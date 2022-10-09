@@ -2,7 +2,7 @@ import React from 'react'
 import AppBar from '@mui/material/AppBar';
 import { Avatar, Typography } from '@mui/material';
 
-export default function Navbar() {
+export default function Navbar(props) {
   return (
     <>
         <AppBar position="static" sx={{
@@ -12,7 +12,7 @@ export default function Navbar() {
             flexDirection: 'row',
         }}>
            <Typography variant="h4" component="div" sx={{ flexGrow: 1 }}>
-                Employee Tracker Dashboard
+               {props.title}
            </Typography>
 
            <Avatar alt="Amit Pile" sx={{
