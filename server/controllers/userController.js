@@ -26,7 +26,6 @@ const userController = {
         date,
         password: passwordHash,
         role,
-        phone,
       });
       await newUser.save();
 
@@ -108,7 +107,7 @@ const userController = {
     }
   },
 };
-
+// console.log(process.env.ACCESS_TOKEN);
 const createAccessToken = (user) => {
   return jwt.sign(user, process.env.ACCESS_TOKEN, { expiresIn: "1d" });
 };
