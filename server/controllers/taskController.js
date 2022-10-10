@@ -13,7 +13,7 @@ const taskController = {
 
       const newTask = new Task({
         id: _id,
-        email,
+        email: email,
         work,
         start,
         totaltime,
@@ -21,7 +21,7 @@ const taskController = {
       });
 
       await newTask.save();
-      res.json({ msg: "Task created successfully!" });
+      res.json(email);
     } catch (err) {
       return res.status(500).json({ msg: err.message });
     }
