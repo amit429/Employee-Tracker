@@ -4,6 +4,7 @@ import Navbar from "../../admin/client/components/Navbar";
 import PieChart from "./components/PieChart";
 import { useContext } from "react";
 import { GlobalState } from "../../Globalstate.js";
+import BarChart from "./components/BarChart";
 
 export default function EmployeeDashboard() {
   // const state = useContext(GlobalState);
@@ -34,6 +35,10 @@ export default function EmployeeDashboard() {
         <PieChart />
         <PieChart />
       </Box>
+      <Box sx={{ marginTop: "-380px" , padding: '20px'}}>
+        <BarChart/>
+      </Box>
+    
     </>
   );
 }
