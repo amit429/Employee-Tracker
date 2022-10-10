@@ -13,6 +13,9 @@ const taskSchema = new mongoose.Schema(
     date: {
       type: String,
     },
+    email: {
+      type: String,
+    },
   },
   {
     timestamps: true,
